@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: PlusOneChattitude/plusonechattitude.com
+  
+media_folder: static/assets # Media files will be stored in the repo under static/asset
+public_folder: assets  # The src attribute for uploaded media will begin with /assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: blog
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
